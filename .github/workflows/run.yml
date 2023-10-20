@@ -24,7 +24,7 @@ jobs:
       
       - name: count workflow dispatch
         env: 
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.MY_SECRET }}
         if: github.event_name == 'workflow_dispatch'
         run: script/count ${{ inputs.org_or_user }}
 
